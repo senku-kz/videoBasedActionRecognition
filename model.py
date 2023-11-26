@@ -47,7 +47,7 @@ class LstmNeuralNetwork:
     def model_summary(self):
         self.model.summary()
 
-    def model_predict(self):
+    def model_evaluation(self):
         # res = self.model.predict(self.X_test)
         # actions_predicted = actions[np.argmax(res)]
 
@@ -79,4 +79,4 @@ if __name__ == '__main__':
     # obj.model_summary()
     # obj.model_save()
     obj.model_load()
-    obj.model_predict()
+    obj.model_evaluation()
