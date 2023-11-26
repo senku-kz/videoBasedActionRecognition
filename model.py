@@ -60,7 +60,7 @@ class LstmNeuralNetwork:
         print("Test dataset size:", self.X_test.size)
         print("Accuracy score:", acc_score)
 
-    def model_predict_one(self, image):
+    def model_predict(self, image):
         return self.model.predict(image)
 
     def model_save(self):

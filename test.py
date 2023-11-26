@@ -68,7 +68,7 @@ if __name__ == '__main__':
                     sequence = sequence[-30:]
 
                     if len(sequence) == 30:
-                        res = model.model_predict_one(np.expand_dims(sequence, axis=0))[0]
+                        res = model.model_predict(np.expand_dims(sequence, axis=0))[0]
                         class_idx = np.argmax(res)
                         print(actions[class_idx])
 
