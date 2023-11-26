@@ -1,11 +1,9 @@
 import os
 import cv2
 import numpy as np
-
-from keypoints import mediapipe_detection, mp_holistic, draw_styled_landmarks, extract_keypoints
-
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
+from keypoints import mediapipe_detection, mp_holistic, draw_styled_landmarks, extract_keypoints
 
 # Path for exported data, numpy arrays
 DATA_PATH = os.path.join('ucf_action')
