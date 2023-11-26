@@ -37,15 +37,6 @@ directory_action_mapper = {
     "Walk-Front": "Walking",
 }
 
-# Thirty videos worth of data
-# no_sequences = 30
-
-# Videos are going to be 30 frames in length
-# sequence_length = 30
-
-# Folder start
-start_folder = 30
-
 
 class ActionDataset:
     def __init__(self):
@@ -57,7 +48,6 @@ class ActionDataset:
         self.dataset_action = "dataset_action"
 
         self.label_map = {label: num for num, label in enumerate(actions)}
-
 
     def read_folders_list(self):
         self.directory_list = [
@@ -256,6 +246,5 @@ if __name__ == '__main__':
     obj = ActionDataset()
     obj.read_folders_list()
     obj.read_files_list()
-    # obj.gen_dataset_img()
     # obj.gen_dataset_np()
     obj.process_data()

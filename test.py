@@ -1,4 +1,3 @@
-import os
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -18,7 +17,6 @@ colors = [
 def prob_viz(res, actions, input_frame, colors):
     h_rec = 20
     h_txt = h_rec + 25
-    text_color_bgr = (99, 49, 222)
     text_color_bgr = (255, 255, 255)
 
     output_frame = input_frame.copy()
