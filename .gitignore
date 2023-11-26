@@ -7,6 +7,7 @@
 /.idea/videoBasedActionRecognition.iml
 
 /ucf_sports_actions.zip
+/ucf_sports_actions/
 
 /dataset_action/Diving/
 /dataset_action/Golf-Swing/
