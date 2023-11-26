@@ -175,9 +175,9 @@ class ActionDataset:
                         # Export keypoints
                         keypoints = extract_keypoints(results)
 
-                        url_img_file = os.path.join(dir_url, "frame_{:03d}.jpg".format(count))
+                        # url_img_file = os.path.join(dir_url, "frame_{:03d}.jpg".format(count))
                         # cv2.imwrite(url_img_file, image)  # save image as JPEG file
-                        cv2.imwrite(url_img_file, frame)  # save frame as JPEG file
+                        # cv2.imwrite(url_img_file, frame)  # save frame as JPEG file
 
                         url_npy_file = os.path.join(dir_url, "frame_{:03d}".format(count))
                         np.save(url_npy_file, keypoints)
