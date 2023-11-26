@@ -6,7 +6,7 @@ from keras.utils import to_categorical
 from keypoints import mediapipe_detection, mp_holistic, draw_styled_landmarks, extract_keypoints
 
 # Path for exported data, numpy arrays
-DATA_PATH = os.path.join('ucf_action')
+# DATA_PATH = os.path.join('ucf_sports_actions/ucf action')
 
 actions = [
     "Diving",
@@ -40,7 +40,7 @@ directory_action_mapper = {
 
 class ActionDataset:
     def __init__(self):
-        self.directory_root = "ucf_action"
+        self.directory_root = "ucf_sports_actions/ucf action"
         self.directory_list = None
         self.video_file_url = None
 
@@ -246,5 +246,5 @@ if __name__ == '__main__':
     obj = ActionDataset()
     obj.read_folders_list()
     obj.read_files_list()
-    # obj.gen_dataset_np()
+    obj.gen_dataset_np()
     obj.process_data()

@@ -64,7 +64,6 @@ class LstmNeuralNetwork:
         return self.model.predict(image)
 
     def model_save(self):
-        # self.model.save('action.h5')
         self.model.save('action.keras')
         print("Model saved successfully")
 
@@ -75,8 +74,8 @@ class LstmNeuralNetwork:
 
 if __name__ == '__main__':
     obj = LstmNeuralNetwork()
-    # obj.train_the_model()
-    # obj.model_summary()
-    # obj.model_save()
+    obj.train_the_model()
+    obj.model_summary()
+    obj.model_save()
     obj.model_load()
     obj.model_evaluation()
