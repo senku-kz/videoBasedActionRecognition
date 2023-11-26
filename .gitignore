@@ -1,4 +1,3 @@
-/dataset_action/
 /Logs/
 /ucf_action/
 /venv/
@@ -9,3 +8,13 @@
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/videoBasedActionRecognition.iml
 /ucf_sports_actions.zip
+/dataset_action/Diving/
+/dataset_action/Golf-Swing/
+/dataset_action/Kicking/
+/dataset_action/Lifting/
+/dataset_action/Riding-Horse/
+/dataset_action/Running/
+/dataset_action/SkateBoarding/
+/dataset_action/Swing-Bench/
+/dataset_action/Swing-Side/
+/dataset_action/Walking/
