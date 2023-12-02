@@ -46,6 +46,9 @@ class LstmNeuralNetwork:
                                             batch_size=self.bath_size,
                                             callbacks=[self.tb_callback]
                                             )
+        self.model_save()
+        self.plot_loss()
+        self.plot_accuracy()
 
     def model_summary(self):
         self.model.summary()
@@ -114,11 +117,8 @@ class LstmNeuralNetwork:
 if __name__ == '__main__':
     obj = LstmNeuralNetwork()
 
-    # obj.train_the_model()
+    obj.train_the_model()
     # obj.model_summary()
-    # obj.model_save()
-    # obj.plot_loss()
-    # obj.plot_accuracy()
 
     obj.model_load()
     obj.model_evaluation()
