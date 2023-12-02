@@ -44,7 +44,7 @@ class ActionDataset:
         self.directory_list = None
         self.video_file_url = None
 
-        self.sequence_length = 30  # Videos are going to be 30 frames in length
+        self.sequence_length = 20  # Videos are going to be 30 frames in length
         self.dataset_action = "dataset_action"
 
         self.label_map = {label: num for num, label in enumerate(actions)}
@@ -76,6 +76,7 @@ class ActionDataset:
         if not os.path.exists(self.dataset_action):
             os.makedirs(self.dataset_action)
 
+        sample = 0
         for dir_class, video_file_url in self.video_file_url:
             print(directory_action_mapper[dir_class], video_file_url)
 
@@ -85,7 +86,6 @@ class ActionDataset:
 
             capture = cv2.VideoCapture(filename=video_file_url)
 
-            sample = 0
             count = 0
             while capture.isOpened():
 
@@ -125,6 +125,7 @@ class ActionDataset:
 
         # Set mediapipe model
         with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+            sequence = 0
             for dir_class, video_file_url in self.video_file_url:
                 print(directory_action_mapper[dir_class], video_file_url)
 
@@ -135,7 +136,6 @@ class ActionDataset:
 
                 capture = cv2.VideoCapture(filename=video_file_url)
 
-                sequence = 0
                 count = 0
 
                 if not capture.isOpened():
@@ -163,8 +163,8 @@ class ActionDataset:
                         # Export keypoints
                         keypoints = extract_keypoints(results)
 
-                        # url_img_file = os.path.join(dir_url, "frame_{:03d}.jpg".format(count))
-                        # cv2.imwrite(url_img_file, image)  # save image as JPEG file
+                        url_img_file = os.path.join(dir_url, "frame_{:03d}.jpg".format(count))
+                        cv2.imwrite(url_img_file, image)  # save image as JPEG file
                         # cv2.imwrite(url_img_file, frame)  # save frame as JPEG file
 
                         url_npy_file = os.path.join(dir_url, "frame_{:03d}".format(count))
@@ -227,7 +227,7 @@ class ActionDataset:
         print("X.shape", X.shape)
         print("y.shape", y.shape)
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.10)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
         print("X_train", X_train.shape)
         print("y_train", y_train.shape)
         print("X_test", X_test.shape)

@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # 1. New detection variables
     sequence = []
     sentence = []
-    threshold = 0.8
+    threshold = 0.5
 
     for video_file_url in urls:
 

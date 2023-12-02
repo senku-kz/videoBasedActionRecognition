@@ -12,12 +12,14 @@ if __name__ == '__main__':
     # ds.process_data()
 
     nn = LstmNeuralNetwork()
-    # nn.train_the_model()
+    nn.train_the_model()
+    nn.plot_loss()
+    nn.plot_accuracy()
     # nn.model_summary()
-    # nn.model_save()
+    nn.model_save()
 
-    nn.model_load()
-    nn.model_evaluation()
+    # nn.model_load()
+    # nn.model_evaluation()
 
     pass
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
