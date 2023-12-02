@@ -1,11 +1,9 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 
-from keypoints import mediapipe_detection, draw_styled_landmarks, extract_keypoints, mp_holistic
 from dataset import actions
+from keypoints import mediapipe_detection, draw_styled_landmarks, extract_keypoints, mp_holistic
 from model import LstmNeuralNetwork
-
 from video_file_play import urls
 
 colors = [
@@ -63,9 +61,9 @@ if __name__ == '__main__':
                     keypoints = extract_keypoints(results)
 
                     sequence.append(keypoints)
-                    sequence = sequence[-30:]
+                    sequence = sequence[-20:]
 
-                    if len(sequence) == 30:
+                    if len(sequence) == 20:
                         res = model.model_predict(np.expand_dims(sequence, axis=0))[0]
                         class_idx = np.argmax(res)
                         print(actions[class_idx])
