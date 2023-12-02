@@ -17,8 +17,8 @@ class LstmNeuralNetwork:
         self.y_train = np.load(os.path.join(self.dataset_action, "y_train.npy"))
         self.X_test = np.load(os.path.join(self.dataset_action, "X_test.npy"))
         self.y_test = np.load(os.path.join(self.dataset_action, "y_test.npy"))
-        self.bath_size = 32
-        self.epochs = 80
+        self.bath_size = 256
+        self.epochs = 110
 
         self.model = None
         self.train_history = None
