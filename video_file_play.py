@@ -63,12 +63,18 @@ def play_video_file(video_file_url):
 
 urls = [
     "ucf_sports_actions/ucf action/Golf-Swing-Side/001/RF1-13207_7015.avi",
+    "ucf_sports_actions/ucf action/Golf-Swing-Back/002/3283-8_701201.avi",
+    "ucf_sports_actions/ucf action/Golf-Swing-Back/005/RF1-13903_70070.avi",
     "ucf_sports_actions/ucf action/Lifting/001/3528-8_70514.avi",
+    "ucf_sports_actions/ucf action/Lifting/004/3528-6_70(2)268.avi",
     "ucf_sports_actions/ucf action/Riding-Horse/002/4456-16_700165.avi",
-    "ucf_sports_actions/ucf action/Run-Side/0055238-17_701581.avi",
-    "ucf action/SkateBoarding-Front/009/947-58108.avi",
+    "ucf_sports_actions/ucf action/Riding-Horse/009/6326-9_70170.avi",
+    "ucf_sports_actions/ucf action/Run-Side/005/5238-17_701581.avi",
+    "ucf_sports_actions/ucf action/Run-Side/011/5117-8_70157.avi",
+    "ucf_sports_actions/ucf action/SkateBoarding-Front/009/947-58108.avi",
     "ucf_sports_actions/ucf action/Walk-Front/006/RF1-13902_70016.avi",
     "ucf_sports_actions/ucf action/Walk-Front/013/RF1-18524_70031.avi",
+    "ucf_sports_actions/ucf action/Walk-Front/014/RF1-18526_70364.avi",
 ]
 
 
